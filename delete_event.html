@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Management System - Delete Event</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <!-- Top Navigation Bar -->
+    <nav class="navbar">
+        <a href="/home.html" class="brand-link">
+            <div class="logo-icon">📅</div>
+            <span class="logo-text">Event Management System</span>
+        </a>
+
+        <div class="nav-links">
+            <!-- Populated dynamically by app.js based on role -->
+        </div>
+    </nav>
+
+    <!-- Confirmation Content -->
+    <main class="container">
+        <div class="confirm-box">
+            <div class="confirm-icon danger">⚠️</div>
+            <h1>Delete Event</h1>
+            <p>
+                Are you sure you want to permanently delete <strong id="delete-event-name">this event</strong>?
+                All registrations associated with it will also be affected. This action cannot be undone.
+            </p>
+
+            <div class="confirm-actions">
+                <button type="button" class="btn btn-danger" id="confirm-delete">
+                    Yes, Delete Event
+                </button>
+                <a href="/events.html" class="btn btn-secondary">
+                    Cancel
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Event Management System | Built with HTML, CSS, JS & FastAPI</p>
+    </footer>
+
+    <script src="/app.js" defer></script>
+</body>
+</html>

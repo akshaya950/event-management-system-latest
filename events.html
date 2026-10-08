@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Management System - Events</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <!-- Top Navigation Bar -->
+    <nav class="navbar">
+        <a href="/home.html" class="brand-link">
+            <div class="logo-icon">📅</div>
+            <span class="logo-text">Event Management System</span>
+        </a>
+
+        <div class="nav-links">
+            <!-- Populated dynamically by app.js based on role -->
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <main class="container">
+        <div class="page-header">
+            <div>
+                <h1>Events Directory</h1>
+                <p>Browse upcoming schedules, competitions, and details.</p>
+            </div>
+            <div style="display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap;">
+                <a href="/add_event.html" class="btn btn-primary add-btn">+ Add New Event</a>
+                <a href="/interested_events.html" class="btn btn-secondary">Registrations</a>
+            </div>
+        </div>
+
+        <div class="table-card">
+            <!-- Search & Filters Toolbar -->
+            <div class="table-toolbar">
+                <div class="toolbar-search">
+                    <input
+                        type="search"
+                        id="search"
+                        class="search-input"
+                        placeholder="Search by event, venue, or category..."
+                        aria-label="Search events"
+                    >
+                </div>
+                <div>
+                    <button type="button" id="completedBtn" class="btn btn-sm btn-outline" style="color: var(--text-main); border-color: var(--border-color);">
+                        Completed Events
+                    </button>
+                </div>
+            </div>
+
+            <!-- Events Table -->
+            <div class="table-responsive">
+                <table id="eventsTable">
+                    <thead>
+                        <tr>
+                            <th>Event Details</th>
+                            <th>Date</th>
+                            <th>Time</th>
+                            <th>Venue</th>
+                            <th>Description</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Populated dynamically by app.js -->
+                    </tbody>
+                </table>
+            </div>
+
+            <p id="emptyMessage" style="text-align: center; color: var(--text-muted); padding: 3rem 1rem;" hidden>
+                No events match your search criteria.
+            </p>
+        </div>
+
+        <div style="margin-top: 1.5rem;">
+            <a href="/dashboard.html" class="btn btn-sm btn-secondary">&larr; Back to Dashboard</a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Event Management System | Built with HTML, CSS, JS & FastAPI</p>
+    </footer>
+
+    <script src="/app.js" defer></script>
+</body>
+</html>

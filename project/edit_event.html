@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="edit_event.css">
+</head>
+<body>
+    <nav>
+        <h2>Event Management</h2>
+        <div>
+            <a href="home.html">Home</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="events.html">View Events</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Edit Event</h1>
+        <p>Update your event details below.</p>
+
+         <form id="event-form">
+             <label for="event_name">Event Name</label>
+             <input type="text" id="event_name" name="event_name" required>
+
+             <label for="event_date">Event Date</label>
+             <input type="date" id="event_date" name="event_date" required>
+
+             <label for="event_time">Event Time</label>
+             <input type="time" id="event_time" name="event_time" required>
+
+            <label for="venue">Venue</label>
+             <input type="text" id="venue" name="venue"
+                   placeholder="Enter event venue" required>
+
+            <label for="category">Event Category</label>
+             <select id="category" name="category" required>
+                <option value="">Select Category</option>
+                <option>Birthday</option>
+                <option>Wedding</option>
+                <option value="College">College Event</option>
+                <option value="Corporate">Corporate Event</option>
+                <option>Other</option>
+            </select>
+
+            <label for="description">Description</label>
+            <textarea id="description" name="description" rows="4"
+                      placeholder="Enter event description"></textarea>
+
+            <div class="buttons">
+                <button type="submit">Update Event</button>
+                <a href="events.html" class="cancel">Cancel</a>
+            </div>
+        </form>
+    </div>
+    <script src="/app.js" defer></script>
+</body>
+</html>

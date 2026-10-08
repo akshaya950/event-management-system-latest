@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Registered Users</title>
+
+    <link rel="stylesheet" href="/events.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Registered Users</h1>
+
+    <table id="usersTable">
+
+        <thead>
+            <tr>
+                <th>User Name</th>
+                <th>User Email</th>
+                <th>Certificate</th>
+            </tr>
+        </thead>
+
+        <tbody></tbody>
+
+    </table>
+
+    <br>
+
+    <a href="/events.html">Back to Events</a>
+
+</div>
+
+
+<script>
+
+const user = JSON.parse(
+    localStorage.getItem("eventease-user") || "{}"
+);
+
+const eventId = new URLSearchParams(
+    window.location.search
+).get("id");
+
+
+async function loadUsers() {
+
+    if (!user.email || !eventId) {
+        alert("Invalid request");
+        return;
+    }
+
+    const response = await fetch(
+        `/api/events/${eventId}/registrations?admin_email=${encodeURIComponent(user.email)}`
+    );
+
+    const data = await response.json();
+
+    console.log("REGISTERED USERS:", data);
+
+    if (!response.ok) {
+        alert(data.detail || "Unable to load users");
+        return;
+    }
+
+    const tbody = document.querySelector("#usersTable tbody");
+
+    tbody.innerHTML = "";
+
+    if (data.length === 0) {
+        tbody.innerHTML = `
+            <tr>
+                <td colspan="3">
+                    No registered users
+                </td>
+            </tr>
+        `;
+        return;
+    }
+
+    data.forEach(function(item) {
+
+        const row = document.createElement("tr");
+
+        const nameCell = document.createElement("td");
+        nameCell.textContent = item.name;
+        row.appendChild(nameCell);
+
+        const emailCell = document.createElement("td");
+        emailCell.textContent = item.email;
+        row.appendChild(emailCell);
+
+        const certificateCell = document.createElement("td");
+
+        const button = document.createElement("button");
+
+        button.innerText = "Generate Certificate";
+        button.className = "certificate-btn";
+
+        button.onclick = function() {
+
+            const url =
+                `/api/events/${eventId}/certificate?user_email=${encodeURIComponent(item.email)}&admin_email=${encodeURIComponent(user.email)}`;
+
+            window.open(url, "_blank");
+        };
+
+        certificateCell.appendChild(button);
+        row.appendChild(certificateCell);
+
+        tbody.appendChild(row);
+    });
+}
+
+loadUsers();
+
+</script>
+
+</body>
+</html>

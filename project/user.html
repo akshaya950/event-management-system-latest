@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard - EventEase</title>
+    <link rel="stylesheet" href="user.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <h2 class="logo">EventEase</h2>
+        <nav>
+            <a href="user.html" class="active">My Dashboard</a>
+            <a href="events.html">View Events</a>
+            <a href="interested_events.html">My Registrations</a>
+            <a href="about.html">About</a>
+            <a href="logout.html">Logout</a>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        <header class="topbar">
+            <h1 id="welcome-name">Welcome!</h1>
+            <p>View events and manage your participation.</p>
+        </header>
+
+        <section class="welcome-card">
+            <h2>User Dashboard</h2>
+            <p>Welcome to EventEase. You can view available events and register for the events you are interested in.</p>
+        </section>
+
+        <section class="action-container">
+            <div class="action-card">
+                <h3>View Events</h3>
+                <p>See all available events and their details.</p>
+                <a href="events.html" class="btn">View Events</a>
+            </div>
+
+            <div class="action-card">
+                <h3>My Registrations</h3>
+                <p>View the events you have registered for.</p>
+                <a href="interested_events.html" class="btn">View Registrations</a>
+            </div>
+        </section>
+
+        <section class="info-box">
+            <h2>What You Can Do</h2>
+            <ul>
+                <li>View available events</li>
+                <li>Register for an event</li>
+                <li>Enter competition details</li>
+                <li>View your registered events</li>
+                <li>Get your participation certificate when available</li>
+            </ul>
+        </section>
+    </main>
+
+    <script src="/app.js" defer></script>
+</body>
+</html>

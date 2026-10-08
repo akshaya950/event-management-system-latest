@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Management System - About</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <!-- Top Navigation Bar -->
+    <nav class="navbar">
+        <a href="/home.html" class="brand-link">
+            <div class="logo-icon">📅</div>
+            <span class="logo-text">Event Management System</span>
+        </a>
+
+        <div class="nav-links">
+            <a href="/home.html" class="nav-link">Home</a>
+            <a href="/events.html" class="nav-link">Events</a>
+            <a href="/about.html" class="nav-link active">About</a>
+            <a href="/login.html" class="btn btn-sm btn-secondary">Login</a>
+            <a href="/register.html" class="btn btn-sm btn-primary">Register</a>
+        </div>
+    </nav>
+
+    <!-- Hero Header -->
+    <section class="hero" style="padding: 3rem 1.5rem;">
+        <div class="hero-content">
+            <h1>About the System</h1>
+            <p>A clean, lightweight event management solution built for simplicity and efficiency.</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container">
+        <div class="card-grid">
+            <div class="card">
+                <h3>🎯 Project Purpose</h3>
+                <p>
+                    The Event Management System simplifies event coordination by replacing paperwork and messy spreadsheets with a streamlined digital platform.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>👑 Role-Based Controls</h3>
+                <p>
+                    Built with two dedicated user roles: <strong>Administrators</strong> with full control over event creation, scheduling, and attendee monitoring; and <strong>Attendees</strong> who can browse, register, and download verified certificates.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>⚡ Technology Stack</h3>
+                <p>
+                    Clean, minimal, hobby-focused stack without heavy third-party build tools:
+                    <br>&bull; <strong>Frontend:</strong> Semantic HTML5, Custom CSS3, Vanilla JavaScript
+                    <br>&bull; <strong>Backend:</strong> Python FastAPI
+                    <br>&bull; <strong>Database:</strong> SQLite with SQLAlchemy
+                    <br>&bull; <strong>Certificates:</strong> ReportLab PDF Generation
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>📜 Instant Certificates</h3>
+                <p>
+                    Automatic generation of participation certificates formatted for official institutional presentation, complete with participant details and event names.
+                </p>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 1rem;">
+            <a href="/events.html" class="btn btn-primary">Browse Current Events</a>
+            <a href="/dashboard.html" class="btn btn-secondary" style="margin-left: 0.5rem;">Go to Dashboard</a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Event Management System | Built with HTML, CSS, JS & FastAPI</p>
+    </footer>
+
+    <script src="/app.js" defer></script>
+</body>
+</html>

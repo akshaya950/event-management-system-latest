@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Management System - Login</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <a href="/home.html" class="brand-link">
+            <div class="logo-icon">📅</div>
+            <span class="logo-text">Event Management System</span>
+        </a>
+
+        <div class="nav-links">
+            <a href="/home.html" class="nav-link">Home</a>
+            <a href="/events.html" class="nav-link">Events</a>
+            <a href="/about.html" class="nav-link">About</a>
+            <a href="/register.html" class="btn btn-sm btn-primary">Register</a>
+        </div>
+    </nav>
+
+    <!-- Login Card -->
+    <main class="container">
+        <div class="form-card">
+            <div class="form-header">
+                <h1>Welcome Back</h1>
+                <p>Login with your credentials to access your dashboard.</p>
+            </div>
+
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="e.g. user@example.com"
+                        required
+                        autocomplete="email"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Enter your password"
+                        required
+                        autocomplete="current-password"
+                    >
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 0.5rem;">
+                    Sign In to Account
+                </button>
+            </form>
+
+            <div class="form-footer-text">
+                Don't have an account? <a href="/register.html">Register here</a>
+            </div>
+            <div class="form-footer-text" style="margin-top: 0.5rem;">
+                <a href="/home.html">&larr; Back to Home</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Event Management System | Built with HTML, CSS, JS & FastAPI</p>
+    </footer>
+
+    <script src="/app.js" defer></script>
+</body>
+</html>

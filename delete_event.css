@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f0ff;
+    color: #333;
+    min-height: 100vh;
+}
+
+nav {
+    background: #6c3fc5;
+    color: white;
+    padding: 18px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 18px;
+}
+
+.delete-box {
+    width: 90%;
+    max-width: 450px;
+    margin: 100px auto;
+    padding: 35px;
+    background: white;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px #00000015;
+}
+
+.icon {
+    width: 55px;
+    height: 55px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    background: #ffe5e5;
+    color: #dc2626;
+    font-size: 35px;
+    font-weight: bold;
+    line-height: 55px;
+}
+
+h1 {
+    color: #6c3fc5;
+    margin-bottom: 15px;
+}
+
+p {
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
+
+.warning {
+    color: #dc2626;
+    font-size: 14px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 25px;
+    flex-wrap: wrap;
+}
+
+.delete-btn, .cancel-btn {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.delete-btn {
+    background: #dc2626;
+    color: white;
+}
+
+.delete-btn:hover {
+    background: #b91c1c;
+}
+
+.cancel-btn {
+    background: #e5e5e5;
+    color: #333;
+}
+
+@media (max-width: 500px) {
+    nav {
+        flex-direction: column;
+    }
+
+    .delete-box {
+        margin: 50px auto;
+        padding: 25px;
+    }
+}

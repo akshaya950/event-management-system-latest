@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Management System - Registrations</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <!-- Top Navigation Bar -->
+    <nav class="navbar">
+        <a href="/home.html" class="brand-link">
+            <div class="logo-icon">📅</div>
+            <span class="logo-text">Event Management System</span>
+        </a>
+
+        <div class="nav-links">
+            <!-- Populated dynamically by app.js based on role -->
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <main class="container">
+        <div class="page-header">
+            <div>
+                <h1>Event Registrations</h1>
+                <p>Track participation and access verified certificates.</p>
+            </div>
+            <div>
+                <a href="/events.html" class="btn btn-secondary">&larr; Back to Events</a>
+            </div>
+        </div>
+
+        <div class="table-card">
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Participant</th>
+                            <th>Email</th>
+                            <th>Event Name</th>
+                            <th>Competition</th>
+                            <th>Date &amp; Time</th>
+                            <th>Venue</th>
+                            <th>Certificate</th>
+                        </tr>
+                    </thead>
+                    <tbody id="interestedTable">
+                        <!-- Populated dynamically by app.js -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Event Management System | Built with HTML, CSS, JS & FastAPI</p>
+    </footer>
+
+    <script src="/app.js" defer></script>
+</body>
+</html>

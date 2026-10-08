@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Management System - Dashboard</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <!-- Top Navigation Bar -->
+    <nav class="navbar">
+        <a href="/home.html" class="brand-link">
+            <div class="logo-icon">📅</div>
+            <span class="logo-text">Event Management System</span>
+        </a>
+
+        <div class="nav-links">
+            <!-- Populated dynamically by app.js based on role -->
+        </div>
+    </nav>
+
+    <div class="dashboard-layout">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-nav">
+                <a href="/dashboard.html" class="active">📊 Dashboard</a>
+                <a href="/events.html">📅 All Events</a>
+                <a href="/interested_events.html">📝 Registrations</a>
+                <a href="/about.html">ℹ️ About</a>
+            </div>
+
+            <div class="sidebar-footer">
+                <a href="/logout.html" class="btn btn-sm btn-secondary" style="width: 100%;">Log Out</a>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <div class="page-header">
+                <div>
+                    <h1>Dashboard</h1>
+                    <p id="welcome-name">Loading your dashboard...</p>
+                </div>
+            </div>
+
+            <!-- Statistics Cards -->
+            <section class="stats-grid">
+                <!-- Dynamically rendered by app.js -->
+            </section>
+
+            <!-- Quick Actions -->
+            <section style="margin-bottom: 2rem;">
+                <h2 style="font-size: 1.25rem; font-weight: 700; color: var(--dark); margin-bottom: 1rem;">Quick Actions</h2>
+                <div class="card-grid">
+                    <!-- Dynamically rendered by app.js -->
+                </div>
+            </section>
+
+            <!-- Recent Events / My Registrations Table -->
+            <section class="recent-events">
+                <div class="table-card">
+                    <div class="table-toolbar">
+                        <h2 style="font-size: 1.15rem; font-weight: 700; color: var(--dark);">Recent Events</h2>
+                    </div>
+                    <div class="table-responsive">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Event Name</th>
+                                    <th>Date</th>
+                                    <th>Venue</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Dynamically rendered by app.js -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Event Management System | Built with HTML, CSS, JS & FastAPI</p>
+    </footer>
+
+    <script src="/app.js" defer></script>
+</body>
+</html>

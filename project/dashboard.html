@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <h2 class="logo">EventEase</h2>
+
+        <nav>
+            <a href="dashboard.html" class="active">Dashboard</a>
+            <a href="events.html">View Events</a>
+            <a href="add_event.html">Add Event</a>
+            <a href="about.html">About</a>
+            <a href="logout.html">Logout</a>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <header class="topbar">
+            <h1>Dashboard</h1>
+            <p id="welcome-name">Welcome back!</p>
+        </header>
+
+        <!-- Statistics Cards -->
+        <section class="stats-container">
+
+            <div class="stat-card purple">
+                <h3>Total Events</h3>
+                <p>0</p>
+            </div>
+
+            <div class="stat-card blue">
+                <h3>Upcoming Events</h3>
+                <p>0</p>
+            </div>
+
+            <div class="stat-card green">
+                <h3>Completed Events</h3>
+                <p>0</p>
+            </div>
+
+        </section>
+
+        <!-- Quick Actions -->
+        <section class="quick-actions">
+            <h2>Quick Actions</h2>
+
+            <div class="action-container">
+                <div class="action-card">
+                    <h3>Add New Event</h3>
+                    <p>Create and organize a new event.</p>
+                    <a href="add_event.html" class="btn">
+                        Add Event
+                    </a>
+                </div>
+
+                <div class="action-card">
+                    <h3>View All Events</h3>
+                    <p>View and manage your existing events.</p>
+                    <a href="events.html" class="btn">
+                        View Events
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recent Events -->
+        <section class="recent-events">
+            <h2>Recent Events</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Event Name</th>
+                        <th>Date</th>
+                        <th>Venue</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                </tbody>
+            </table>
+        </section>
+
+    </main>
+    <script src="/app.js" defer></script>
+</body>
+</html>

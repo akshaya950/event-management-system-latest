@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="delete_event.css">
+</head>
+<body>
+    <nav>
+        <h2>Event Management</h2>
+        <div>
+            <a href="home.html">Home</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="events.html">View Events</a>
+        </div>
+    </nav>
+
+    <div class="delete-box">
+        <div class="icon">!</div>
+
+        <h1>Delete Event</h1>
+        <p>Are you sure you want to delete <strong id="delete-event-name">this event</strong>?</p>
+        <p class="warning">This action cannot be undone.</p>
+
+        <div class="buttons">
+            <button class="delete-btn" id="confirm-delete">
+                Yes, Delete
+            </button>
+
+            <a href="events.html" class="cancel-btn">Cancel</a>
+        </div>
+    </div>
+
+    <script src="/app.js" defer></script>
+</body>
+</html>
+
+
+

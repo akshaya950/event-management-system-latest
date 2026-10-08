@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users Interested Events</title>
+
+    <link rel="stylesheet" href="/events.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Users Interested Events</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>User Name</th>
+                <th>Email</th>
+                <th>Event</th>
+                <th>Competition</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Venue</th>
+            </tr>
+        </thead>
+
+        <tbody id="interestedTable"></tbody>
+    </table>
+
+    <br>
+
+    <a href="/events.html">
+        <button>Back to Events</button>
+    </a>
+
+</div>
+
+<script>
+
+const user = JSON.parse(
+    localStorage.getItem("eventease-user") || "{}"
+);
+
+async function loadInterestedEvents() {
+
+    const response = await fetch(
+        `/api/interested-events?admin_email=${encodeURIComponent(user.email)}`
+    );
+
+    const data = await response.json();
+
+    if (!response.ok) {
+        alert(data.detail || "Unable to load data");
+        return;
+    }
+
+    const table = document.getElementById("interestedTable");
+
+    table.innerHTML = "";
+
+    if (data.length === 0) {
+
+        table.innerHTML = `
+            <tr>
+                <td colspan="7">
+                    No registered users found
+                </td>
+            </tr>
+        `;
+
+        return;
+    }
+
+    data.forEach(function(item) {
+
+        const row = document.createElement("tr");
+
+        row.innerHTML = `
+            <td>${item.name}</td>
+            <td>${item.email}</td>
+            <td>${item.event_name}</td>
+            <td>${item.competition || "Not selected"}</td>
+            <td>${item.event_date}</td>
+            <td>${item.event_time}</td>
+            <td>${item.venue}</td>
+        `;
+
+        table.appendChild(row);
+    });
+}
+
+loadInterestedEvents();
+
+</script>
+
+</body>
+</html>

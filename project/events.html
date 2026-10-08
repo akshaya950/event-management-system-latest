@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta c<harset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="events.css">
+</head>
+<body>
+     <!-- Navigation Bar -->
+    <nav class="navbar">
+        <h2 class="logo">EventEase</h2>
+
+        <div class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="dashboard.html">Dashboard</a>
+            <!-- <a href="add_event.html">Add Event</a> -->
+             <a href="events.html">View Events</a>
+            <a href="about.html">About</a>
+            <a href="logout.html">Logout</a>
+        </div>
+    </nav>
+
+    <!-- Page Heading -->
+    <header class="page-header">
+        <h1>Manage Your Events</h1>
+        <p>View and organize all your events in one place.</p>
+        <a href="add_event.html" class="add-btn">+ Add New Event</a>
+        <a href="/interested_events.html">
+    <button>Users Interested Events</button>
+</a>
+        
+    </header>
+
+    <!-- Events Section -->
+    <section class="events-section">
+
+        <div class="section-heading">
+            <h2>All Events</h2>
+            <input
+                type="search"
+                id="search"
+                placeholder="Search events..."
+                aria-label="Search events"
+            >
+            <button id="completedBtn">Completed Events</button>
+        </div>
+
+        <div class="table-container">
+            <table id="eventsTable">
+                <thead>
+                    <tr>
+                        <th>Event Name</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Venue</th>
+                        <th>Description</th>
+                        <th>Actions</th>
+                    
+                    </tr>
+                </thead>
+
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+
+        <p id="emptyMessage" class="empty-message" hidden>
+            No events found.
+        </p>
+
+        <a href="dashboard.html" class="back-link">← Back to Dashboard</a>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 EventEase | Event Management System</p>
+    </footer>
+
+    <script src="/app.js" defer></script>
+</body>
+</html>
